@@ -8,6 +8,7 @@ import java.net.URLConnection;
 import java.util.Arrays;
 import java.util.List;
 
+import com.sun.net.httpserver.HttpServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +33,24 @@ public class RequestHandler extends Thread {
                 sb.append((char) in.read());
             }
 
-            log.info("sb == {}", sb);
+
+//            log.info("sb.getClass().getName() == {}", sb.split(" "));
+            String sbStr[] = sb.toString().split(" ");
+
+            boolean checks = false;
+
+            for (String _string : sbStr) {
+                if (_string.equals("/index.html")) {
+                    checks = true;
+                    break;
+                }
+            }
+
+            if (checks) {
+//                response.setStatus(HttpServletResponse.SC_OK);
+//                response.getOutputStream().write(content);
+//                baseRequest.setHandled(true);
+            }
 
             // TODO 사용자 요청에 대한 처리는 이 곳에 구현하면 된다.
             DataOutputStream dos = new DataOutputStream(out);
