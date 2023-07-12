@@ -46,6 +46,7 @@ public class RequestHandler extends Thread {
                 }
             }
 
+            // 테스트 커밋
             if (checks) {
 //                response.setStatus(HttpServletResponse.SC_OK);
 //                response.getOutputStream().write(content);
