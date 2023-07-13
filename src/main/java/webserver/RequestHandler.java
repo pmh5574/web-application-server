@@ -48,9 +48,9 @@ public class RequestHandler extends Thread {
 
             // 테스트 커밋
             if (checks) {
-//                response.setStatus(HttpServletResponse.SC_OK);
-//                response.getOutputStream().write(content);
-//                baseRequest.setHandled(true);
+                response.setStatus(HttpServletResponse.SC_OK);
+                response.getOutputStream().write(content);
+                baseRequest.setHandled(true);
             }
 
             // TODO 사용자 요청에 대한 처리는 이 곳에 구현하면 된다.
