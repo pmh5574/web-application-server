@@ -21,6 +21,7 @@ public class RequestHandler extends Thread {
         this.connection = connectionSocket;
     }
 
+    //localhost:8080로 접속시 실행
     public void run() {
         log.debug("New Client Connect! Connected IP : {}, Port : {}", connection.getInetAddress(),
                 connection.getPort());
@@ -48,6 +49,7 @@ public class RequestHandler extends Thread {
 
             // 테스트 커밋
             if (checks) {
+                log.info("checks == {}", checks);
 //                response.setStatus(HttpServletResponse.SC_OK);
 //                response.getOutputStream().write(content);
 //                baseRequest.setHandled(true);
